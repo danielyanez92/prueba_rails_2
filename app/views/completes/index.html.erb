@@ -1,0 +1,8 @@
+<strong>usuarios que han completado el todo:</strong>
+<% @completes.each do |complete| %>
+  <tr>
+    <td>
+      <%= complete.user.email %>
+    </td>
+  </tr>
+  <% end %>

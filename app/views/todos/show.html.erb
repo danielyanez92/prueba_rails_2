@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @todo.name %>
+</p>
+
+<p>
+  <strong>Photo:</strong>
+  <%= @todo.photo %>
+</p>
+
+<h6>Usuarios que han completado esta tarea:</h6>
+<ul>
+  <% @users_todo.each do |todo| %>
+    <li>
+      <%= todo.user.email %>
+    </li>
+  <% end %>
+</ul>
+<%= link_to 'Edit', edit_todo_path(@todo) %> |
+<%= link_to 'Back', todos_path %>
